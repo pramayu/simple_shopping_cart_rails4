@@ -1,2 +1,8 @@
-<h1>Cart#index</h1>
-<p>Find me in app/views/cart/index.html.erb</p>
+<h1>Your Cart</h1>
+<%= link_to "Clear Cart", cart_clear_path %>
+<% @cart.each do | id, quantity | %>
+	<% product = Product.find_by_id(id) %>
+	<ul>
+		<%= link_to product.title, product %>
+	</ul>
+<% end %>

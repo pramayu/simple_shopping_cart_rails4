@@ -27,5 +27,6 @@ class CartController < ApplicationController
     else
       @cart = {}
     end
+    # @product = Product.find_by_id(params[:id])
   end
 end
